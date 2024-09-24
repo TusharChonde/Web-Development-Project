@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Your Gym Name</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #9191f8;
+            color: #333;
+            overflow-x: hidden;
+        }
+        /* header {
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        header h1 {
+            font-size: 4rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-weight: 700;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); 
+        }*/
+        section {
+            padding: 50px 20px;
+        }
+        .intro, .story, .values, .team, .testimonials, .cta {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .intro h2, .story h2, .values h2, .team h2, .testimonials h2, .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #ff7e5f;
+        }
+        .intro p, .story p, .values p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 30px;
+        }
+        .intro {
+            background-color: #ffecd2;
+            padding: 60px 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgb(199, 191, 191);
+            margin-bottom: 40px;
+        }
+        .story {
+            background: linear-gradient(135deg, #89f7fe, #66a6ff);
+            color: white;
+            padding: 50px 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(186, 179, 179, 0.911);
+            margin-bottom: 40px;
+        }
+        .values {
+            background-color: #f8f8f8;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgb(169, 162, 162);
+            margin-bottom: 40px;
+        }
+        .values ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .values ul li {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            color: #555;
+        }
+        .team {
+            padding: 50px 0;
+            /* background: linear-gradient(135deg, #fddb92, #d1fdff); */
+        }
+        .team .trainer {
+            display: inline-block;
+            width: 30%;
+            margin: 20px 10px;
+            text-align: center;
+            background-color: rgb(0, 0, 0);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(241, 229, 229, 0.788);
+            transition: transform 0.3s ease;
+        }
+        .team .trainer:hover {
+            transform: scale(1.05);
+        }
+        .trainer img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            box-shadow: 0 5px 10px rgba(216, 205, 205, 0.938);
+        }
+        .trainer h3 {
+            font-size: 1.5rem;
+            margin: 15px 0 5px;
+            color: rgba(199, 211, 211, 0.977);
+            font-family: 'BrandonTextWeb-Regular';
+        }
+        .testimonials {
+            background-color: #ffe6e6;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgb(191, 183, 183);
+        }
+        .testimonials .testimonial {
+            background-color: rgba(231, 232, 243, 0.776);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgb(201, 194, 194);
+        }
+        .cta {
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            color: white;
+            padding: 50px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(154, 145, 145, 0.954);
+            margin-top: 50px;
+        }
+        .cta button {
+            background-color: #ff7e5f;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            color: white;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .cta button:hover {
+            background-color: #feb47b;
+        }
+        footer {
+            background-color: #282828;
+             color: white;
+             padding: 20px 0;
+               text-align: center;
+}
+
+footer .social-links {
+  margin-top: 10px;
+}
+
+footer .social-links a {
+  color: #e67e22;
+  text-decoration: none;
+}
+
+header {
+    background-color: #282828;
+    color: white;
+    padding: 20px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+header h1.logo {
+    font-size: 1.8em;
+    color: #e67e22;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+}
+
+header .cta {
+    background-color: #e67e22;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 60%; 
+}
+
+#aboutusheading{
+
+    align-items:center;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgba(233, 225, 227, 0.984);
+    font-size: 40px;
+}
+.pro{
+    color: #f8f8f8;
+}
+#Meet{
+    color: #f8f8f8;
+    font-size: 60px;
+}
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <header>
+            <div class="container">
+                <h1 class="logoh">Fitness Hub</h1>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        
+                        
+                    </ul>
+                </nav>
+                <a href="join us.html" class="cta">Join Now</a>
+            </div>
+        
+    </header>
+    <h1 id="aboutusheading">About Us</h1>
+    <!-- Introduction -->
+    <section class="intro">
+        <h2>Welcome to Fitness Hub</h2>
+        <p>At Fitness Hub, we believe in empowering individuals to achieve their fitness goals and transform their lives. Whether you're a beginner or a seasoned athlete, we provide the best training programs and support to help you succeed.</p>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="story">
+        <h2>Our Story</h2>
+        <p>Founded in 2010, Fitness Hub started with a small group of fitness enthusiasts who wanted to create a community-driven space where people could come together to pursue health and wellness. Over the years, we have grown into one of the most recognized fitness centers in the city, with a reputation for top-tier trainers, innovative programs, and an inclusive environment.</p>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="values">
+        <h2>Our Mission & Core Values</h2>
+        <p>Our mission is to inspire, motivate, and support our members in their fitness journey. We live by the following values:</p>
+        <ul>
+            <li>✔ Commitment to Personal Growth and Wellness</li>
+            <li>✔ Building a Strong, Supportive Fitness Community</li>
+            <li>✔ Providing Cutting-edge Training Techniques</li>
+            <li>✔ Promoting Inclusivity and Diversity</li>
+        </ul>
+    </section>
+
+    <!-- Meet the Team Section -->
+    <section class="team">
+        <h2 id="Meet">Meet Our Trainers</h2>
+        <div class="trainer">
+            <img src="trainer1.webp" alt="Trainer 1">
+            <h3>Akash Patil</h3>
+            <p class="pro">Strength & Conditioning Coach</p>
+        </div>
+        <div class="trainer">
+            <img src="trainer2.webp" alt="Trainer 2">
+            <h3>Smita Deshmukh</h3>
+            <p class="pro">Certified Yoga Instructor</p>
+        </div>
+        <div class="trainer">
+            <img src="trainer3.png" alt="Trainer 3">
+            <h3>Faijal shaikh</h3>
+            <p class="pro">Cardio and HIIT Specialist</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>What Our Members Say</h2>
+        <div class="testimonial">
+            <p>"I have been a member of this gym for three years, and it's the best decision I've ever made for my health. The trainers are motivating and knowledgeable, and the community atmosphere keeps me coming back!" - Dinesh R.</p>
+        </div>
+        <div class="testimonial">
+            <p>"The group classes and personalized training programs have transformed not only my body but also my mindset. I've achieved goals I never thought possible!" - Rutuja S.</p>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta">
+        <h2>Join Our Fitness Family Today!</h2>
+        <p>Ready to take the next step in your fitness</p>
+    </section><br>
+        </body>
+
+
+            <footer>
+                <p>&copy; 2024 Fitness Hub. All Rights Reserved.</p>
+                <div class="social-links">
+                    <a href="#">Facebook</a> |
+                    <a href="#">Instagram</a> |
+                    <a href="#">Twitter</a>
+                </div>
+              </footer>
